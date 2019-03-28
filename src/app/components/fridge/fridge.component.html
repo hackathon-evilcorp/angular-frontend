@@ -1,4 +1,5 @@
 <div class="fridgename">{{ loadCurrentFridge().fridgeName }}</div>
+<div class="create-postit"><a routerLink="/">Create new Post-It</a></div>
 <div class="flex">
         <div *ngFor="let postIt of loadCurrentFridge().postIts" class="box">
             <img src="../../../assets/postit_green.png"/>
