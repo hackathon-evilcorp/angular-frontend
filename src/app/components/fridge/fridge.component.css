@@ -2,6 +2,15 @@ html, body {
     height: 100%;
 }
 
+.fridgename {
+    color: black;
+    padding: 20px 0;
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
 .flex {
     margin: 0 18%;
     width: 80%;
@@ -23,7 +32,7 @@ html, body {
 
 .text-centered {
     position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
