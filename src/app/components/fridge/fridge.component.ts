@@ -10,6 +10,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./fridge.component.css']
 })
 export class FridgeComponent implements OnInit {
+  asgards = [1,2,3,4,5,6,7];
 
   constructor(private fridgeService: FridgeService, private route: Router) {
   }
