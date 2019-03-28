@@ -9,6 +9,7 @@ import { LayoutModule } from '@angular/cdk/layout';
 import { MatToolbarModule, MatButtonModule, MatSidenavModule, MatIconModule, MatListModule } from '@angular/material';
 import { FridgeComponent } from './components/fridge/fridge.component';
 import { UserComponent } from './components/user/user.component';
+import { CreateFridgeComponent } from './components/create-fridge/create-fridge.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { UserComponent } from './components/user/user.component';
     MainNavComponent,
     routingComponents,
     FridgeComponent,
-    UserComponent
+    UserComponent,
+    CreateFridgeComponent
   ],
   imports: [
     BrowserModule,

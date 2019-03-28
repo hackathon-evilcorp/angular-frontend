@@ -5,9 +5,13 @@
       [opened]="!(isHandset$ | async)">
     <mat-toolbar>Menu</mat-toolbar>
     <mat-nav-list>
-      <a mat-list-item href="#">Link 1</a>
-      <a mat-list-item href="#">Link 2</a>
-      <a mat-list-item href="#">Link 3</a>
+      <span class="spacer">My Fridges</span>
+      <a mat-list-item routerLink="">
+        <mat-icon aria-label="Add fridge icon">plus</mat-icon>Create new fridge...
+      </a>
+      <a mat-list-item *ngFor="let fridge of fridges"><a [routerLink]="['/fridge',fridge.id]">{{fridge.fridgeName}}</a></a>
+      <span class="spacer">My PostIts</span>
+      <a mat-list-item *ngFor="let fridge of fridges" href="/fridges/{{fridge.id}}"></a>
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>

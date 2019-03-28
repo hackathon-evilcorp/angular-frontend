@@ -2,6 +2,8 @@ import { Component } from '@angular/core';
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
+import { Fridge } from 'src/app/models/fridge';
+import { MOCK_FRIDGE } from 'src/app/helpers/mock-fridge';
 
 @Component({
   selector: 'app-main-nav',
@@ -15,6 +17,10 @@ export class MainNavComponent {
       map(result => result.matches)
     );
 
-  constructor(private breakpointObserver: BreakpointObserver) {}
+  private fridges: Fridge[];
+
+  constructor(private breakpointObserver: BreakpointObserver) {
+    this.fridges = MOCK_FRIDGE;
+  }
 
 }

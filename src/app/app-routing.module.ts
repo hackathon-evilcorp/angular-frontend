@@ -3,7 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { FridgeComponent } from './components/fridge/fridge.component';
 
 const routes: Routes = [
-  { path: 'fridge', component: FridgeComponent},
+  { path: 'fridge/:id', component: FridgeComponent},
   { path: '**', redirectTo: '' }
 ];
 
