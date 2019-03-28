@@ -12,6 +12,9 @@ import { UserComponent } from './components/user/user.component';
 import { CreateFridgeComponent } from './components/create-fridge/create-fridge.component';
 import { CreatePostitComponent } from './components/create-postit/create-postit.component';
 import { LoginComponent } from './components/login/login.component';
+import { JwtInterceptor } from './helpers/jwt.interceptor';
+import { HTTP_INTERCEPTORS } from '@angular/common/http';
+
 
 @NgModule({
   declarations: [
@@ -35,7 +38,9 @@ import { LoginComponent } from './components/login/login.component';
     MatIconModule,
     MatListModule
   ],
-  providers: [],
+  providers: [
+    //{ provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

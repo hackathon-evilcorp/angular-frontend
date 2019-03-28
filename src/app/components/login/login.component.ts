@@ -22,7 +22,6 @@ export class LoginComponent implements OnInit {
   }
 
   onSubmit() {
-
     this.authenticationService.login()
         .pipe(first())
         .subscribe(
