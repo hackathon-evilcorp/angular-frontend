@@ -7,7 +7,8 @@
     <mat-nav-list>
       <span class="spacer">My Fridges</span>
       <a mat-list-item routerLink="">
-        <mat-icon aria-label="Add fridge icon">plus</mat-icon>Create new fridge...
+        <mat-icon aria-label="Add fridge icon">plus</mat-icon>
+        Create new fridge...
       </a>
       <a mat-list-item *ngFor="let fridge of fridges"><a [routerLink]="['/fridge',fridge.id]">{{fridge.fridgeName}}</a></a>
       <span class="spacer">My PostIts</span>
@@ -24,7 +25,7 @@
         *ngIf="isHandset$ | async">
         <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
       </button>
-      <span>hackathon-fridge</span>
+      <span>Fridge</span>
     </mat-toolbar>
     <ng-content></ng-content>
   </mat-sidenav-content>
