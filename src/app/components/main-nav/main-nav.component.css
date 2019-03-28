@@ -18,4 +18,5 @@
 
 .spacer {
   flex: 10 100 auto;
+  font-weight: bold;
 }
