@@ -4,15 +4,20 @@
       [mode]="(isHandset$ | async) ? 'over' : 'side'"
       [opened]="!(isHandset$ | async)">
     <mat-toolbar>Menu</mat-toolbar>
-    <mat-nav-list>
+    <mat-nav-list style="padding: 15px;">
+      <a class="nav-home" routerLink="/">
+        <mat-icon aria-label="home">home</mat-icon>
+      </a>
+      <br><br>
       <span class="spacer">My Fridges</span>
       <a mat-list-item routerLink="">
         <mat-icon aria-label="Add fridge icon">add</mat-icon>
-        Create new fridge
+        <span style="margin: 5px;">New fridge</span>
       </a>
       <div *ngFor="let fridge of getFridges()">
-        <a mat-list-item [routerLink]="['/fridge',fridge.id]">{{fridge.fridgeName}} <mat-icon aria-label="Update fridge icon">settings</mat-icon></a>
+        <a mat-list-item [routerLink]="['/fridge',fridge.id]">{{fridge.fridgeName}}</a>
       </div>
+      <br>
       <span class="spacer">My PostIts</span>
       <a mat-list-item *ngFor="let fridge of fridges" href="/fridges/{{fridge.id}}"></a>
     </mat-nav-list>
