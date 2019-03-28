@@ -1,10 +1,13 @@
 import { User } from './user';
 import { Fridge } from './fridge';
 
-export interface PostIt {
-    id: number;
-    creator: User;
-    type: string;
-    body: string;
-    fridge: Fridge;
+export class PostIt {
+
+    constructor(public id: number,
+        public creator: User,
+        public type: string,
+        public body: string,
+        public fridge: Fridge) {
+    }
+    
 }
