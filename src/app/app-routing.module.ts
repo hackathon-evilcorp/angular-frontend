@@ -2,6 +2,8 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { FridgeComponent } from './components/fridge/fridge.component';
 import { LoginComponent } from './components/login/login.component';
+import { AuthGuard } from './guard/auth.guard';
+
 
 const routes: Routes = [
   { path: 'fridge/:id', component: FridgeComponent},
