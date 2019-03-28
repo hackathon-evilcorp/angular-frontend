@@ -10,7 +10,9 @@
         <mat-icon aria-label="Add fridge icon">plus</mat-icon>
         Create new fridge...
       </a>
-      <a mat-list-item *ngFor="let fridge of fridges"><a [routerLink]="['/fridge',fridge.id]">{{fridge.fridgeName}}</a></a>
+      <div *ngFor="let fridge of getFridges()">
+        <a mat-list-item [routerLink]="['/fridge',fridge.id]">{{fridge.fridgeName}}</a>
+      </div>
       <span class="spacer">My PostIts</span>
       <a mat-list-item *ngFor="let fridge of fridges" href="/fridges/{{fridge.id}}"></a>
     </mat-nav-list>
