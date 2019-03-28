@@ -1,6 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { Fridge } from 'src/app/models/fridge';
-import { MOCK_FRIDGE } from 'src/app/helpers/mock-fridge';
 import { FridgeService } from 'src/app/services/fridge.service';
 import { Router } from '@angular/router';
 
@@ -10,7 +8,6 @@ import { Router } from '@angular/router';
   styleUrls: ['./fridge.component.css']
 })
 export class FridgeComponent implements OnInit {
-  asgards = [1,2,3,4,5,6,7];
 
   constructor(private fridgeService: FridgeService, private route: Router) {
   }
