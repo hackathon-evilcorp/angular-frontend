@@ -4,10 +4,10 @@ import { PostIt } from './postIt';
 export class Fridge {
    
     constructor(public id: number, 
-        public admin: User, 
+        public admin: string, 
         public fridgeName: string, 
         public postIts: PostIt[], 
-        public users: User[]) {
+        public users: string) {
     }
 
 }

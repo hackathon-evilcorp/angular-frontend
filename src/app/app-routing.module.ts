@@ -1,7 +1,9 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { FridgeComponent } from './components/fridge/fridge.component';
 
 const routes: Routes = [
+  { path: 'fridge', component: FridgeComponent},
   { path: '**', redirectTo: '' }
 ];
 
@@ -10,5 +12,5 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
-export const routingComponents = []
+export const routingComponents = [FridgeComponent]
 

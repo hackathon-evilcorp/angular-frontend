@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Fridge } from 'src/app/models/fridge';
+import { MOCK_FRIDGE } from 'src/app/helpers/mock-fridge';
 
 @Component({
   selector: 'app-fridge',
@@ -7,9 +9,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FridgeComponent implements OnInit {
 
-  constructor() { }
+  fridges: Fridge[];
+
+  constructor() {
+    this.fridges = MOCK_FRIDGE
+  }
 
   ngOnInit() {
   }
+
 
 }

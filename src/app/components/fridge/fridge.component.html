@@ -1,3 +1,8 @@
 <p>
   fridge works!
 </p>
+<ul *ngFor="let fridge of fridges">
+  <li>{{ fridge.fridgeName }}</li>
+  <li *ngFor="let postIt of fridge.postIts">{{postIt.type}}</li>
+</ul>
+
