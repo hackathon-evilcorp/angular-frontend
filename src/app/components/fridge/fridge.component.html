@@ -3,13 +3,13 @@
 <div class="flex">
         <div *ngFor="let postIt of loadCurrentFridge().postIts" class="box">
             <img src="../../../assets/postit_green.png"/>
-            <span class="text-centered">{{postIt.body}}</span>
             <span>
-                <mat-chip-list aria-label="asd">
-                    <mat-chip><mat-icon aria-label="Edit postit">edit</mat-icon></mat-chip>
-                    <mat-chip><mat-icon aria-label="Delete postit">delete</mat-icon></mat-chip>
+                <mat-chip-list class="button-right" aria-label="postit operations">
+                    <mat-chip [routerLink]="['/fridge/edit/postit',postIt.id]"><mat-icon aria-label="Edit postit">edit</mat-icon></mat-chip>
+                    <mat-chip [routerLink]="['/fridge/delete/postit',postIt.id]"><mat-icon aria-label="Delete postit">delete</mat-icon></mat-chip>
                 </mat-chip-list>
             </span>
+            <span class="text-centered">{{postIt.body}}</span>
         </div>
 </div>
 

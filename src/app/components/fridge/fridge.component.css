@@ -54,3 +54,9 @@ html, body {
     left: 50%;
     transform: translate(-50%, -50%);
 }
+
+.button-right {
+    position: absolute;
+    top: 82%;
+    left: 47%;
+}
