@@ -7,11 +7,11 @@
     <mat-nav-list>
       <span class="spacer">My Fridges</span>
       <a mat-list-item routerLink="">
-        <mat-icon aria-label="Add fridge icon">plus</mat-icon>
-        Create new fridge...
+        <mat-icon aria-label="Add fridge icon">add</mat-icon>
+        Create new fridge
       </a>
       <div *ngFor="let fridge of getFridges()">
-        <a mat-list-item [routerLink]="['/fridge',fridge.id]">{{fridge.fridgeName}}</a>
+        <a mat-list-item [routerLink]="['/fridge',fridge.id]">{{fridge.fridgeName}} <mat-icon aria-label="Update fridge icon">settings</mat-icon></a>
       </div>
       <span class="spacer">My PostIts</span>
       <a mat-list-item *ngFor="let fridge of fridges" href="/fridges/{{fridge.id}}"></a>
@@ -27,7 +27,7 @@
         *ngIf="isHandset$ | async">
         <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
       </button>
-      <span>Fridge</span>
+      <span>Shopping list planner app by Evil Corp © 2019</span>
     </mat-toolbar>
     <ng-content></ng-content>
   </mat-sidenav-content>

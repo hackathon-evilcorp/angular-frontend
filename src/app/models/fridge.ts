@@ -1,4 +1,3 @@
-import { User } from './user';
 import { PostIt } from './postIt';
 
 export class Fridge {

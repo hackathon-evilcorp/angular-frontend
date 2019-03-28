@@ -10,6 +10,8 @@ import { MatToolbarModule, MatButtonModule, MatSidenavModule, MatIconModule, Mat
 import { FridgeComponent } from './components/fridge/fridge.component';
 import { UserComponent } from './components/user/user.component';
 import { CreateFridgeComponent } from './components/create-fridge/create-fridge.component';
+import { CreatePostitComponent } from './components/create-postit/create-postit.component';
+import { LoginComponent } from './components/login/login.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +20,9 @@ import { CreateFridgeComponent } from './components/create-fridge/create-fridge.
     routingComponents,
     FridgeComponent,
     UserComponent,
-    CreateFridgeComponent
+    CreateFridgeComponent,
+    CreatePostitComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
