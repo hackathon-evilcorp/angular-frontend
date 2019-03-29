@@ -15,7 +15,7 @@ export class FridgeComponent implements OnInit {
   constructor(private fridgeService: FridgeService, private route: Router) {
   }
   
-  loadCurrentFridge(): Observable<Object> {
+  loadCurrentFridge() {
     var url = this.route.url;
     // return this.fridgeService.getFridgeById((url.substring(url.lastIndexOf('/') + 1)));
     return this.fridgeService.getFridgeById(url.substring(url.lastIndexOf('/') + 1));
