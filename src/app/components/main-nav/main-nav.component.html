@@ -20,7 +20,7 @@
         <mat-icon aria-label="Add fridge icon">add</mat-icon>
         <span style="margin: 5px;">New fridge</span>
       </a>
-      <div *ngFor="let fridge of getFridges()">
+      <div *ngFor="let fridge of fridges">
         <a mat-list-item [routerLink]="['/fridge',fridge.id]">{{fridge.fridgeName}}</a>
       </div>
       <br>

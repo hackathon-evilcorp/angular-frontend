@@ -1,6 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnChanges } from '@angular/core';
 import { FridgeService } from 'src/app/services/fridge.service';
 import { Router } from '@angular/router';
+import { HttpClient } from '@angular/common/http';
+import { Fridge } from 'src/app/models/fridge';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-fridge',
@@ -8,19 +11,19 @@ import { Router } from '@angular/router';
   styleUrls: ['./fridge.component.css']
 })
 export class FridgeComponent implements OnInit {
+  apiUrl: string;
+  fridge: any;
 
   constructor(private fridgeService: FridgeService, private route: Router) {
   }
-
-  ngOnInit() {
-    this.loadCurrentFridge();
-    console.log(this.loadCurrentFridge().toString);
-  }
-
-  loadCurrentFridge() {
+  
+  loadCurrentFridge(): Observable<Object> {
     var url = this.route.url;
-    return this.fridgeService.getFridgeById((url.substring(url.lastIndexOf('/') + 1)));
+    // return this.fridgeService.getFridgeById((url.substring(url.lastIndexOf('/') + 1)));
+    return this.fridgeService.getFridgeById(url.substring(url.lastIndexOf('/') + 1));
   }
-
-
+  
+  ngOnInit() {
+    this.loadCurrentFridge().subscribe(data => this.fridge = data);
+  }
 }

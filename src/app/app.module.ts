@@ -13,7 +13,7 @@ import { CreateFridgeComponent } from './components/create-fridge/create-fridge.
 import { CreatePostitComponent } from './components/create-postit/create-postit.component';
 import { LoginComponent } from './components/login/login.component';
 import { JwtInterceptor } from './helpers/jwt.interceptor';
-import { HTTP_INTERCEPTORS } from '@angular/common/http';
+import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { HomeComponent } from './components/home/home.component';
 
 
@@ -39,7 +39,8 @@ import { HomeComponent } from './components/home/home.component';
     MatSidenavModule,
     MatIconModule,
     MatListModule,
-    MatChipsModule
+    MatChipsModule,
+    HttpClientModule
   ],
   providers: [
     //{ provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true }
