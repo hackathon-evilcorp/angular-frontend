@@ -1,8 +1,6 @@
 import { Component, OnInit, OnChanges } from '@angular/core';
 import { FridgeService } from 'src/app/services/fridge.service';
 import { Router } from '@angular/router';
-import { HttpClient } from '@angular/common/http';
-import { Fridge } from 'src/app/models/fridge';
 import { Observable } from 'rxjs';
 
 @Component({
