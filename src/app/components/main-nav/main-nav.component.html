@@ -9,6 +9,11 @@
         <mat-icon aria-label="home">home</mat-icon>
       </a>
       <br><br>
+      <a routerLink="/">
+        <mat-icon aria-label="Shopping icon">add_shopping_cart</mat-icon>
+        <span style="margin: 5px;">Going to shop</span>
+      </a>
+      <br><br>
       <span class="spacer">My Fridges</span>
       <a mat-list-item routerLink="/addfridge">
         <mat-icon aria-label="Add fridge icon">add</mat-icon>
@@ -32,7 +37,7 @@
         *ngIf="isHandset$ | async">
         <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
       </button>
-      <span>Shopping list planner app by Evil Corp © 2019</span>
+      <span>Fridge Magnets by Evil Corp © 2019</span>
     </mat-toolbar>
     <ng-content></ng-content>
   </mat-sidenav-content>
