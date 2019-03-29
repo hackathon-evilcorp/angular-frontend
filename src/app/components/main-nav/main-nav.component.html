@@ -7,6 +7,12 @@
     <mat-nav-list style="padding: 15px;">
       <a class="nav-home" routerLink="/">
         <mat-icon aria-label="home">home</mat-icon>
+        <span style="margin: 5px;">Home</span>
+      </a>
+      <br><br>
+      <a routerLink="/goingshop">
+        <mat-icon aria-label="Shopping icon">add_shopping_cart</mat-icon>
+        <span style="margin: 5px;">Going to shop</span>
       </a>
       <br><br>
       <span class="spacer">My Fridges</span>
@@ -14,12 +20,24 @@
         <mat-icon aria-label="Add fridge icon">add</mat-icon>
         <span style="margin: 5px;">New fridge</span>
       </a>
-      <div *ngFor="let fridge of getFridges()">
+      <div *ngFor="let fridge of fridges">
         <a mat-list-item [routerLink]="['/fridge',fridge.id]">{{fridge.fridgeName}}</a>
       </div>
       <br>
+<<<<<<< HEAD
       <span class="spacer">My PostIts</span>
       <a mat-list-item></a>
+=======
+      <a class="nav-home" routerLink="/support">
+        <mat-icon aria-label="help">help_outline</mat-icon>
+        <span style="margin: 5px;">Help</span>
+      </a>
+      <br><br>
+      <a class="nav-home" routerLink="/logout">
+        <mat-icon aria-label="help">call_missed_outgoing</mat-icon>
+        <span style="margin: 5px;">Logout</span>
+      </a>
+>>>>>>> 685f4f51a06d89bfccb2dcd9a98516a763be1edc
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>
@@ -32,7 +50,7 @@
         *ngIf="isHandset$ | async">
         <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
       </button>
-      <span>Shopping list planner app by Evil Corp © 2019</span>
+      <span>Fridge Magnets by Evil Corp © 2019</span>
     </mat-toolbar>
     <ng-content></ng-content>
   </mat-sidenav-content>
