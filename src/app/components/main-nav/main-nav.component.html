@@ -7,6 +7,7 @@
     <mat-nav-list style="padding: 15px;">
       <a class="nav-home" routerLink="/">
         <mat-icon aria-label="home">home</mat-icon>
+        <span style="margin: 5px;">Home</span>
       </a>
       <br><br>
       <a routerLink="/">
@@ -23,8 +24,15 @@
         <a mat-list-item [routerLink]="['/fridge',fridge.id]">{{fridge.fridgeName}}</a>
       </div>
       <br>
-      <span class="spacer">My PostIts</span>
-      <a mat-list-item *ngFor="let fridge of fridges" href="/fridges/{{fridge.id}}"></a>
+      <a class="nav-home" routerLink="/">
+        <mat-icon aria-label="help">help_outline</mat-icon>
+        <span style="margin: 5px;">Help</span>
+      </a>
+      <br><br>
+      <a class="nav-home" routerLink="/">
+        <mat-icon aria-label="help">call_missed_outgoing</mat-icon>
+        <span style="margin: 5px;">Logout</span>
+      </a>
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>
