@@ -5,16 +5,18 @@ import { LoginComponent } from './components/login/login.component';
 import { AuthGuard } from './guard/auth.guard';
 import { CreateFridgeComponent } from './components/create-fridge/create-fridge.component';
 import { CreatePostitComponent } from './components/create-postit/create-postit.component';
+import { HomeComponent } from './components/home/home.component';
 
 
 const routes: Routes = [
+  { path: '', component: HomeComponent},
   { path: 'fridge/:id', component: FridgeComponent},
   { path: 'addfridge', component: CreateFridgeComponent},
   { path: 'addpostit', component: CreatePostitComponent},
   { path: 'fridge/edit/postit/:id', component: CreatePostitComponent},
   //{ path: 'fridge/delete/postit/:id', component: DeletePostitComponent},
   { path: 'login', component: LoginComponent},
-  { path: '**', redirectTo: '' }
+  { path: '**', redirectTo: ''}
 ];
 
 @NgModule({

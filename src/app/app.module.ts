@@ -14,6 +14,7 @@ import { CreatePostitComponent } from './components/create-postit/create-postit.
 import { LoginComponent } from './components/login/login.component';
 import { JwtInterceptor } from './helpers/jwt.interceptor';
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
+import { HomeComponent } from './components/home/home.component';
 
 
 @NgModule({
@@ -25,7 +26,8 @@ import { HTTP_INTERCEPTORS } from '@angular/common/http';
     UserComponent,
     CreateFridgeComponent,
     CreatePostitComponent,
-    LoginComponent
+    LoginComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
