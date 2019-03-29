@@ -1,9 +1,6 @@
 import { Injectable } from '@angular/core';
-import { MOCK_FRIDGE } from '../helpers/mock-fridge';
 import { Router } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
-import { Fridge } from '../models/fridge';
-import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
